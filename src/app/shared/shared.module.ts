@@ -5,19 +5,21 @@ import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from './../material/material.module';
 
-import { ProductDirective } from './directives/task.directive';
-
 import { HeaderComponent } from './header/header.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+
+import { InventoryDirective } from './directives/inventory.directive';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent, 
-    ProductDirective, 
     DialogComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    InventoryDirective,
+    FooterComponent
   ],
   imports: [
     CommonModule, 
@@ -28,9 +30,10 @@ import { ProductFormComponent } from './product-form/product-form.component';
   ],
   exports: [
     HeaderComponent, 
-    ProductDirective, 
     DialogComponent, 
-    ProductFormComponent
+    ProductFormComponent,
+    InventoryDirective,
+    FooterComponent
   ],
 })
 export class SharedModule {}

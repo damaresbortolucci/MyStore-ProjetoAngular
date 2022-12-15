@@ -1,7 +1,8 @@
 h1{
-    text-align: center;
     color: #fff;
+    color: rgb(13, 11, 59);
     margin-bottom: 30px;
+    margin-left: 50px;
   }
 .product-container{
     width: 90%;

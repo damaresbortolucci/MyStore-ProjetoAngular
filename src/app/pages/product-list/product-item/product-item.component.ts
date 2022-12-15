@@ -12,8 +12,10 @@ import Product from 'src/app/models/Product';
 export class ProductItemComponent implements OnChanges {
 
   @Input() product?: Product;
-  @ViewChild('dialogTemplate') dialogTemplate?: TemplateRef<any>;
+  @ViewChild('dialogTemplateUpdate') dialogTemplateUpdate?: TemplateRef<any>;
+  @ViewChild('dialogTemplateDelete') dialogTemplateDelete?: TemplateRef<any>;
 
+  
   constructor(private productService: ProductService, private dialog: MatDialog) {
   }
 
@@ -21,16 +23,19 @@ export class ProductItemComponent implements OnChanges {
     console.log(`ProductList Item com id = ${this.product?.id}!`);
   }
 
-
-  deleteItem() {
-    if (this.product) this.productService.deleteProduct(this.product.id);
+  
+  openDialog() {
+    if (this.dialogTemplateUpdate) {
+      this.dialog.open(this.dialogTemplateUpdate, {
+        data: { title: "Atualizar Produto" }
+      });
+    }
   }
 
-
-  openDialog() {
-    if (this.dialogTemplate) {
-      this.dialog.open(this.dialogTemplate, {
-        data: { title: "Atualizar Produto" }
+  openDialogDelete() {
+    if (this.dialogTemplateDelete) {
+      this.dialog.open(this.dialogTemplateDelete, {
+        data: { title: "Excluir o produto?" }
       });
     }
   }

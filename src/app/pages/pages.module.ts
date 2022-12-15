@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductItemComponent } from './product-list/product-item/product-item.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
+import { ProductDeleteComponent } from './product-delete/product-delete.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SharedModule } from '../shared/shared.module';
 
@@ -20,19 +21,21 @@ registerLocaleData(localePt);
     ProductItemComponent,
     ProductCreateComponent,
     PageNotFoundComponent,
+    ProductDeleteComponent
   ],
   imports: [
     CommonModule, 
     MaterialModule, 
     SharedModule,
     FormsModule, 
-    ReactiveFormsModule // está aqui para poder usar o header?
+    ReactiveFormsModule
   ],
   exports: [
     ProductListComponent, 
     ProductItemComponent,
     ProductCreateComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProductDeleteComponent
   ]
 })
 export class PagesModule {}

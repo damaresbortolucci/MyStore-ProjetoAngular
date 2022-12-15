@@ -1,4 +1,8 @@
-<form class="product-form" *ngIf="productForm" [formGroup]="productForm" (ngSubmit)="onSubmitForm()">
+<form class="product-form" 
+      *ngIf="productForm" 
+      [formGroup]="productForm" 
+      (ngSubmit)="onSubmitForm()"
+>
 
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>Título</mat-label>
@@ -25,6 +29,8 @@
     <input matInput formControlName="image">
   </mat-form-field>
 
-  <button class="submit-btn" mat-stroked-button color="primary" type="submit"> {{ requestType == "post"? "Criar Novo" : "Atualizar" }} Produto</button>
+  <button class="submit-btn" mat-stroked-button color="primary" type="submit"> 
+    {{ requestType == "post"? "Adicionar" : "Atualizar" }} Produto
+  </button>
 
 </form>

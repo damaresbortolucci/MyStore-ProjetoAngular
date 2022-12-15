@@ -7,12 +7,31 @@
 }
 
 .product-details{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 80%;
   font-size: 16px;
 }
 
-.hasItems{
+.product-details p span{
+  font-weight: 500;
+}
+
+.btn_product-card{
+  display: flex;
+  gap: 8px;
+}
+
+.outOfStock{
   color: red;
+}
+
+.mat-mdc-card-header{
+  flex-direction: column;
+  align-items: center;
+}
+
+.mat-mdc-card-header span{
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
 }

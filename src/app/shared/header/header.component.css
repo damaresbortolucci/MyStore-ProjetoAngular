@@ -1,6 +1,14 @@
 .header-container{
-    background-color: blueviolet;
+    background-color: #3F3B47;
     color: #fff;
+    height: 80px;
+    padding: 0 40px;
+}
+
+.header-container h1{
+    cursor: pointer;
+    margin: 0;
+    font-size: 24px;
 }
 
 .mat-toolbar-single-row {
@@ -8,6 +16,6 @@
 }
 
 .active {
-    background-color: rgb(101, 6, 189);
-    color: white !important;
+    background-color: #ECECEC;
+    color: #3F3B47 !important;
 }

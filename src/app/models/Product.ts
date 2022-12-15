@@ -1,5 +1,5 @@
 export default class Product {
-  static lastId: number = 9;
+  static lastId: number = 12;
 
   id: number;
   title: string;
