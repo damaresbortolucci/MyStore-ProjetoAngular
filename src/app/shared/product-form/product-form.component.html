@@ -1,0 +1,30 @@
+<form class="product-form" *ngIf="productForm" [formGroup]="productForm" (ngSubmit)="onSubmitForm()">
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Título</mat-label>
+    <input matInput formControlName="title">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Preço</mat-label>
+    <input matInput formControlName="price">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Quantidade em estoque</mat-label>
+    <input matInput formControlName="quantity">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Url da imagem</mat-label>
+    <input matInput formControlName="image">
+  </mat-form-field>
+
+  <button class="submit-btn" mat-stroked-button color="primary" type="submit"> {{ requestType == "post"? "Criar Novo" : "Atualizar" }} Produto</button>
+
+</form>

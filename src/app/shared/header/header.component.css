@@ -1,0 +1,13 @@
+.header-container{
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.mat-toolbar-single-row {
+    justify-content: space-between;
+}
+
+.active {
+    background-color: rgb(101, 6, 189);
+    color: white !important;
+}
